@@ -7,7 +7,7 @@ int main() {
 	//Demonstration of sizeof data types in C
     printf("Demonstration of sizeof data types in C\n\n");
 
-	//printthe size of data types
+	//print the size of data types
 	printf("Size of char: %zu bytes\n", sizeof(char));
 	printf("Size of short: %zu bytes\n", sizeof(short));
 	printf("Size of int: %zu bytes\n", sizeof(int));
