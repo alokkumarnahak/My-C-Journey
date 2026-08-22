@@ -1,9 +1,9 @@
 //Ranges of data types in C
 
 //preprocessor directive
-#include<stdio.h>
-#include<limits.h>
-#include<float.h>
+#include<stdio.h>   //for standard input and output functions
+#include<limits.h> //for integer data type ranges
+#include<float.h>  //for floating point data type ranges
 
 //main function
 int main()  {
@@ -30,6 +30,7 @@ int main()  {
     printf("double: %.10e to %.10e\n", DBL_MIN, DBL_MAX);
     printf("long double: %.10Le to %.10Le\n", LDBL_MIN, LDBL_MAX);
 
+    //return statement
     return 0;
     
 }
