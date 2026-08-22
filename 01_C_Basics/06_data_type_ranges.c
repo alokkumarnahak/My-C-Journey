@@ -34,3 +34,5 @@ int main()  {
     return 0;
     
 }
+
+// Note :- Unsigned means all non-negative range of a data type. So, we only print the maximum value for unsigned types and it starts from 0
