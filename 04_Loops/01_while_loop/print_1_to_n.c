@@ -1,4 +1,4 @@
-//Demonstrate whole loop
+//Demonstrate while loop
 //Program to print positive numbers from 1 to n
 
 //preprocessor directive

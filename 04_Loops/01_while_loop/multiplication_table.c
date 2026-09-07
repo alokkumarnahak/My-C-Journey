@@ -1,4 +1,4 @@
-//Demonstrate whole loop
+//Demonstrate while loop
 //Program to print multiplication table
 
 //preprocessor directive

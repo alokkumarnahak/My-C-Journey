@@ -1,4 +1,4 @@
-//Demonstrate whole loop
+//Demonstrate while loop
 //Program to print even numbers from 2 to n
 
 //preprocessor directive

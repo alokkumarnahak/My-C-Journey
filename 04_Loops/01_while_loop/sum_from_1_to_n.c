@@ -1,4 +1,4 @@
-//Demonstrate whole loop
+//Demonstrate while loop
 //Program to print sum from 1 to n
 
 //preprocessor directive
