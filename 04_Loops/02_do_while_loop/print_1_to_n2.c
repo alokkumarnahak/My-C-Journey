@@ -14,7 +14,11 @@ int main()  {
 
     //taking input from user
     printf("Enter n(positive) : ");
-    scanf("%d",&n);
+    if (scanf("%d", &n) != 1 || n <= 0)
+    {
+        printf("Invalid input !");
+        return 1;
+    }
 
     //logic
     do{

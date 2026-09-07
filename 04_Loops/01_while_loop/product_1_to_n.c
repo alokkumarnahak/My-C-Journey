@@ -1,31 +1,37 @@
-//Demonstrate while loop
-//Program to print product from 1 to n
+// Demonstrate while loop
+// Program to print product from 1 to n
 
-//preprocessor directive
-#include<stdio.h>
+// preprocessor directive
+#include <stdio.h>
 
-//main function
-int main()  {
+// main function
+int main()
+{
     int n;
     int i = 1;
     int product = 1;
 
-    //program description
+    // program description
     printf("--- Product from 1 to n ---\n\n");
 
-    //taking input from user
+    // taking input from user
     printf("Enter n(positive) : ");
-    scanf("%d",&n);
+    if (scanf("%d", &n) != 1 || n <= 0)
+    {
+        printf("Invalid input !");
+        return 1;
+    }
 
-    //logic
-    while(i <= n)    {
+    // logic
+    while (i <= n)
+    {
         product *= i;
         i++;
     }
 
-    //printing product
-    printf(" from 1 to %d is : %d\n",n,product);
-    
-    //return statement
+    // printing product
+    printf(" from 1 to %d is : %d\n", n, product);
+
+    // return statement
     return 0;
 }
