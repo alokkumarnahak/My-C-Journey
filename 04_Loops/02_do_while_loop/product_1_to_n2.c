@@ -23,11 +23,11 @@ int main()
     }
 
     // logic
-    while (i <= n)
+    do
     {
         product *= i;
         i++;
-    }
+    } while (i <= n);
 
     // printing product
     printf("Product from 1 to %d is : %d\n", n, product);
