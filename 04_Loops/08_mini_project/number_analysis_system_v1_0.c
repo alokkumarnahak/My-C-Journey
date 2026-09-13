@@ -9,6 +9,7 @@ int main()
 {
     //variable declaration
     int number, choice;
+    int temp;
     int count = 0;
     int sum = 0, remainder;
     int product = 1;
@@ -40,34 +41,37 @@ int main()
     //logic
     switch(choice)  {
         case 1:
-            while(number > 0)   {
+            temp = number;
+            while(temp > 0)   {
                 count++;
-                number /= 10;
+                temp /= 10;
             }
             printf("\nNumber of digits : %d",count);
             break;
         
         case 2:
-            while(number > 0)   {
-                remainder = number % 10;
+            temp = number;
+            while(temp > 0)   {
+                remainder = temp % 10;
                 sum += remainder;
-                number /= 10;
+                temp /= 10;
             }
             printf("\nSum of digits : %d",sum);
             break;
 
         case 3:
-            while(number > 0)   {
-                remainder = number % 10;
+            temp = number;
+            while(temp > 0)   {
+                remainder = temp % 10;
                 product *= remainder;
-                number /= 10;
+                temp /= 10;
             }
             printf("\nProduct of digits : %d",product);
             break;
 
         case 4:
-            printf("\nExit");
             break;
+            
         default:
             printf("\nInvalid Entry !!");
     }
