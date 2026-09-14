@@ -17,10 +17,12 @@ int main()
     int isPrime;
     int newNum = 0;
     int factorial;
+    int largest;
+    int smallest;
 
     // Menu
     printf("========================================\n");
-    printf("       NUMBER ANALYSIS SYSTEM v3.0\n");
+    printf("       NUMBER ANALYSIS SYSTEM v4.0\n");
     printf("========================================\n\n");
 
     // user input
@@ -40,7 +42,11 @@ int main()
     printf("9. Check armstrong\n");
     printf("10. Check strong number\n");
     printf("11. Check perfect number\n");
-    printf("12. Exit\n");
+    printf("12. Count even digits.\n");
+    printf("13. Count odd digits.\n");
+    printf("14. Find largest digit.\n");
+    printf("15. Find smallest digit.\n");
+    printf("16. Exit\n");
     printf("------------------------------------\n\n");
 
     // choices
@@ -206,21 +212,23 @@ int main()
         if (number <= 0)
         {
             printf("\nPlease enter a number greater than zero.");
-            break;
         }
         else
         {
             printf("\nFactors : ");
 
-            for (int i = 1; i <= number / 2; i++)
+            for (int i = 1; i * i <= number / 2; i++)
             {
                 if (number % i == 0)
                 {
                     printf("%d ", i);
+
+                    if (i != number / i)
+                    {
+                        printf("%d ", number / i);
+                    }
                 }
             }
-
-            printf("%d", number);
         }
 
         break;
@@ -244,6 +252,10 @@ int main()
                     printf("%d ", i);
                     temp /= i;
                 }
+            }
+            if (temp > 1)
+            {
+                printf("%d", temp);
             }
         }
         break;
@@ -355,16 +367,102 @@ int main()
             }
             if (sum == number)
             {
-                printf("%d is a perfect number.\n", number);
+                printf("\n%d is a perfect number.", number);
             }
             else
             {
-                printf("%d is not a perfect number.\n", number);
+                printf("\n%d is not a perfect number.", number);
             }
         }
         break;
 
     case 12:
+        if (number == 0)
+            printf("0 has 1 even digit.");
+        else
+        {
+            temp = number;
+            if (temp < 0)
+                temp = -temp;
+            while (temp > 0)
+            {
+                remainder = temp % 10;
+                if (remainder % 2 == 0)
+                {
+                    count++;
+                }
+
+                temp /= 10;
+            }
+
+            printf("\n%d has %d even digits.", number, count);
+        }
+        break;
+
+    case 13:
+        if (number == 0)
+            printf("0 has 0 odd digit.");
+        else
+        {
+            temp = number;
+            if (temp < 0)
+                temp = -temp;
+            while (temp > 0)
+            {
+                remainder = temp % 10;
+                if (remainder % 2 != 0)
+                {
+                    count++;
+                }
+
+                temp /= 10;
+            }
+
+            printf("\n%d has %d odd digits.", number, count);
+        }
+        break;
+
+    case 14:
+        temp = number;
+        if (temp < 0)
+            temp = -temp;
+
+        largest = temp % 10;
+        while (temp > 0)
+        {
+            remainder = temp % 10;
+            if (remainder >= largest)
+            {
+                largest = remainder;
+            }
+
+            temp /= 10;
+        }
+        printf("%d is the largest digit.", largest);
+
+        break;
+
+    case 15:
+        temp = number;
+        if (temp < 0)
+            temp = -temp;
+
+        smallest = temp % 10;
+        while (temp > 0)
+        {
+            remainder = temp % 10;
+            if (remainder <= smallest)
+            {
+                smallest = remainder;
+            }
+
+            temp /= 10;
+        }
+        printf("%d is the smallest digit.", smallest);
+
+        break;
+
+    case 16:
         printf("\nExit");
         break;
 
@@ -375,6 +473,3 @@ int main()
     // return statement
     return 0;
 }
-// Armstrong
-// ├── Strong number
-// └── Perfect number
