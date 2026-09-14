@@ -1,7 +1,7 @@
 // Making a mini project using loops
 // Number Analysis System
 
-// preprocessor directivea
+// preprocessor directive
 #include <stdio.h>
 
 // main function
@@ -21,7 +21,7 @@ int main()
     int smallest;
 
     // Menu
-    printf("========================================\n");
+    printf("\n========================================\n");
     printf("       NUMBER ANALYSIS SYSTEM v4.0\n");
     printf("========================================\n\n");
 
@@ -49,14 +49,17 @@ int main()
     printf("16. Exit\n");
     printf("------------------------------------\n\n");
 
+repeat:
+
     // choices
-    printf("Enter your choice: ");
+    printf("\nEnter your choice: ");
     scanf("%d", &choice);
 
     // logic
     switch (choice)
     {
     case 1:
+        count = 0;
         temp = number;
 
         if (temp == 0)
@@ -72,10 +75,11 @@ int main()
             }
         }
 
-        printf("\nNumber of digits : %d", count);
+        printf("\nNumber of digits : %d\n", count);
         break;
 
     case 2:
+        sum = 0;
         temp = number;
 
         if (temp < 0)
@@ -90,11 +94,12 @@ int main()
             temp /= 10;
         }
 
-        printf("\nSum of digits : %d", sum);
+        printf("\nSum of digits : %d\n", sum);
         break;
 
     case 3:
         temp = number;
+        product = 1;
 
         if (temp < 0)
         {
@@ -115,11 +120,12 @@ int main()
             }
         }
 
-        printf("\nProduct of digits : %d", product);
+        printf("\nProduct of digits : %d\n", product);
         break;
 
     case 4:
         temp = number;
+        revNum = 0;
 
         if (temp < 0)
         {
@@ -138,11 +144,12 @@ int main()
             revNum = -revNum;
         }
 
-        printf("\nReversed number : %d", revNum);
+        printf("\nReversed number : %d\n", revNum);
         break;
 
     case 5:
         temp = number;
+        revNum = 0;
 
         if (temp < 0)
         {
@@ -163,11 +170,11 @@ int main()
 
         if (number == revNum)
         {
-            printf("\n%d is a palindrome number", number);
+            printf("\n%d is a palindrome number.\n", number);
         }
         else
         {
-            printf("\n%d is not a palindrome number", number);
+            printf("\n%d is not a palindrome number.\n", number);
         }
 
         break;
@@ -175,12 +182,12 @@ int main()
     case 6:
         if (number <= 0)
         {
-            printf("\nPlease enter a number greater than zero.");
+            printf("\nPlease enter a number greater than zero.\n");
             break;
         }
         else if (number == 1)
         {
-            printf("\nNeither prime nor composite.");
+            printf("\nNeither prime nor composite.\n");
             break;
         }
         else
@@ -199,11 +206,11 @@ int main()
 
         if (isPrime)
         {
-            printf("\nPrime number.");
+            printf("\nPrime number.\n");
         }
         else
         {
-            printf("\nNot a prime number.");
+            printf("\nNot a prime number.\n");
         }
 
         break;
@@ -211,7 +218,7 @@ int main()
     case 7:
         if (number <= 0)
         {
-            printf("\nPlease enter a number greater than zero.");
+            printf("\nPlease enter a number greater than zero.\n");
         }
         else
         {
@@ -229,6 +236,7 @@ int main()
                     }
                 }
             }
+            printf("\n");
         }
 
         break;
@@ -236,7 +244,7 @@ int main()
     case 8:
         if (number <= 0)
         {
-            printf("\nPlease enter a number greater than zero.");
+            printf("\nPlease enter a number greater than zero.\n");
             break;
         }
         else
@@ -257,24 +265,27 @@ int main()
             {
                 printf("%d", temp);
             }
+            printf("\n");
         }
         break;
 
     case 9:
         if (number < 0)
         {
-            printf("\nPlease enter a non-negative number.");
+            printf("\nPlease enter a non-negative number.\n");
             break;
         }
 
         if (number == 0)
         {
-            printf("It is an armstrong number.");
+            printf("It is an armstrong number.\n");
             break;
         }
         else
         {
             temp = number;
+            count = 0;
+            newNum = 0;
 
             while (temp > 0)
             {
@@ -302,11 +313,11 @@ int main()
 
             if (newNum == number)
             {
-                printf("\nIt is an armstrong number.");
+                printf("\nIt is an armstrong number.\n");
             }
             else
             {
-                printf("\nIt is not an armstrong number.");
+                printf("\nIt is not an armstrong number.\n");
             }
         }
 
@@ -315,12 +326,13 @@ int main()
     case 10:
         if (number <= 0)
         {
-            printf("\nPlease enter a number greater than zero.");
+            printf("\nPlease enter a number greater than zero.\n");
             break;
         }
         else
         {
             temp = number;
+            sum = 0;
 
             while (temp > 0)
             {
@@ -341,11 +353,11 @@ int main()
             // checking Strong number
             if (sum == number)
             {
-                printf("%d is a Strong number.\n", number);
+                printf("\n%d is a Strong number.\n", number);
             }
             else
             {
-                printf("%d is not a Strong number.\n", number);
+                printf("\n%d is not a Strong number.\n", number);
             }
         }
         break;
@@ -353,11 +365,13 @@ int main()
     case 11:
         if (number <= 0)
         {
-            printf("\nPlease enter a number greater than zero.");
+            printf("\nPlease enter a number greater than zero.\n");
             break;
         }
         else
         {
+            sum = 0;
+
             for (int i = 1; i <= number / 2; i++)
             {
                 if (number % i == 0)
@@ -367,21 +381,23 @@ int main()
             }
             if (sum == number)
             {
-                printf("\n%d is a perfect number.", number);
+                printf("\n%d is a perfect number.\n", number);
             }
             else
             {
-                printf("\n%d is not a perfect number.", number);
+                printf("\n%d is not a perfect number.\n", number);
             }
         }
         break;
 
     case 12:
         if (number == 0)
-            printf("0 has 1 even digit.");
+            printf("\n0 has 1 even digit.\n");
         else
         {
             temp = number;
+            count = 0;
+
             if (temp < 0)
                 temp = -temp;
             while (temp > 0)
@@ -395,16 +411,18 @@ int main()
                 temp /= 10;
             }
 
-            printf("\n%d has %d even digits.", number, count);
+            printf("\n%d has %d even digits.\n", number, count);
         }
         break;
 
     case 13:
         if (number == 0)
-            printf("0 has 0 odd digit.");
+            printf("\n0 has 0 odd digit.\n");
         else
         {
             temp = number;
+            count = 0;
+
             if (temp < 0)
                 temp = -temp;
             while (temp > 0)
@@ -418,58 +436,68 @@ int main()
                 temp /= 10;
             }
 
-            printf("\n%d has %d odd digits.", number, count);
+            printf("\n%d has %d odd digits.\n", number, count);
         }
         break;
 
     case 14:
-        temp = number;
-        if (temp < 0)
-            temp = -temp;
-
-        largest = temp % 10;
-        while (temp > 0)
+        if (number == 0)
+            printf("\n0 is the largest digit.\n");
+        else
         {
-            remainder = temp % 10;
-            if (remainder >= largest)
-            {
-                largest = remainder;
-            }
+            temp = number;
+            if (temp < 0)
+                temp = -temp;
 
-            temp /= 10;
+            largest = temp % 10;
+            while (temp > 0)
+            {
+                remainder = temp % 10;
+                if (remainder >= largest)
+                {
+                    largest = remainder;
+                }
+
+                temp /= 10;
+            }
+            printf("\n%d is the largest digit.\n", largest);
         }
-        printf("%d is the largest digit.", largest);
 
         break;
 
     case 15:
-        temp = number;
-        if (temp < 0)
-            temp = -temp;
-
-        smallest = temp % 10;
-        while (temp > 0)
+        if (number == 0)
+            printf("\n0 is the smallest digit.\n");
+        else
         {
-            remainder = temp % 10;
-            if (remainder <= smallest)
-            {
-                smallest = remainder;
-            }
+            temp = number;
+            if (temp < 0)
+                temp = -temp;
 
-            temp /= 10;
+            smallest = temp % 10;
+            while (temp > 0)
+            {
+                remainder = temp % 10;
+                if (remainder <= smallest)
+                {
+                    smallest = remainder;
+                }
+
+                temp /= 10;
+            }
+            printf("\n%d is the smallest digit.\n", smallest);
         }
-        printf("%d is the smallest digit.", smallest);
 
         break;
 
     case 16:
-        printf("\nExit");
-        break;
+        printf("\nExiting....");
+        return 0;
 
     default:
-        printf("\nInvalid Entry !!");
+        printf("\nInvalid Entry !!\n");
     }
 
-    // return statement
-    return 0;
+    goto repeat;
+
 }
