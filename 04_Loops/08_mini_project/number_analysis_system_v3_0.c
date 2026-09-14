@@ -3,6 +3,7 @@
 
 // preprocessor directive
 #include <stdio.h>
+#include <math.h>
 
 // main function
 int main()
@@ -14,12 +15,13 @@ int main()
     int sum = 0, remainder;
     int product = 1;
     int revNum = 0;
-    int origNum;
     int isPrime;
+    int newNum = 0;
+    int factorial;
 
     // Menu
     printf("========================================\n");
-    printf("       NUMBER ANALYSIS SYSTEM v2.0\n");
+    printf("       NUMBER ANALYSIS SYSTEM v3.0\n");
     printf("========================================\n\n");
 
     // user input
@@ -36,7 +38,10 @@ int main()
     printf("6. Check prime\n");
     printf("7. Find factors\n");
     printf("8. Find prime factors\n");
-    printf("9. Exit\n");
+    printf("9. Check armstrong\n");
+    printf("10. Check strong number\n");
+    printf("11. Check perfect number\n");
+    printf("12. Exit\n");
     printf("------------------------------------\n\n");
 
     // choices
@@ -132,7 +137,6 @@ int main()
         break;
 
     case 5:
-        origNum = number;
         temp = number;
 
         if (temp < 0)
@@ -147,18 +151,18 @@ int main()
             temp /= 10;
         }
 
-        if (origNum < 0)
+        if (number < 0)
         {
             revNum = -revNum;
         }
 
-        if (origNum == revNum)
+        if (number == revNum)
         {
-            printf("\n%d is a palindrome number", origNum);
+            printf("\n%d is a palindrome number", number);
         }
         else
         {
-            printf("\n%d is not a palindrome number", origNum);
+            printf("\n%d is not a palindrome number", number);
         }
 
         break;
@@ -243,10 +247,109 @@ int main()
                 }
             }
         }
-
         break;
 
     case 9:
+        if (number < 0)
+        {
+            printf("\nPlease enter a non-negative number.");
+            break;
+        }
+
+        if (number == 0)
+        {
+            printf("It is an armstrong number.");
+            break;
+        }
+        else
+        {
+            temp = number;
+            while (temp > 0)
+            {
+                count++;
+                temp /= 10;
+            }
+
+            temp = number;
+            while (temp > 0)
+            {
+                remainder = temp % 10;
+                newNum = newNum + pow(remainder, count);
+                temp /= 10;
+            }
+
+            if (newNum == number)
+                printf("\nIt is an armstrong number.");
+            else
+                printf("\nIt is not an armstrong number.");
+        }
+        break;
+
+    case 10:
+        if (number <= 0)
+        {
+            printf("\nPlease enter a number greater than zero.");
+            break;
+        }
+        else
+        {
+            temp = number;
+
+            while (temp > 0)
+            {
+                remainder = temp % 10;
+
+                factorial = 1;
+
+                for (int i = 1; i <= remainder; i++)
+                {
+                    factorial = factorial * i;
+                }
+
+                sum = sum + factorial;
+
+                temp = temp / 10;
+            }
+
+            // checking Strong number
+            if (sum == number)
+            {
+                printf("%d is a Strong number.\n", number);
+            }
+            else
+            {
+                printf("%d is not a Strong number.\n", number);
+            }
+        }
+        break;
+
+    case 11:
+        if (number <= 0)
+        {
+            printf("\nPlease enter a number greater than zero.");
+            break;
+        }
+        else
+        {
+            for (int i = 1; i <= number / 2; i++)
+            {
+                if (number % i == 0)
+                {
+                    sum += i;
+                }
+            }
+            if (sum == number)
+            {
+                printf("%d is a perfect number.\n", number);
+            }
+            else
+            {
+                printf("%d is not a perfect number.\n", number);
+            }
+        }
+        break;
+
+    case 12:
         printf("\nExit");
         break;
 
@@ -257,3 +360,6 @@ int main()
     // return statement
     return 0;
 }
+// Armstrong
+// ├── Strong number
+// └── Perfect number
