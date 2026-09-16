@@ -9,13 +9,13 @@ void greet();
 
 //function definition
 void greet()   {
-    printf("Welcome to 'MY-C-Journey'.");
+    printf("Welcome to 'MY-C-Journey'.\n");
 }
 
 //main function 
 int main( ) {
     //program description
-    printf("Demonsstrate function");
+    printf("Demonstrate function\n\n");
 
     //function calling
     greet();
