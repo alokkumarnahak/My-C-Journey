@@ -1,5 +1,5 @@
 //Demonstration of functions in C
-//function to greet users
+//function rules
 
 //preprocessor directive 
 #include<stdio.h>
