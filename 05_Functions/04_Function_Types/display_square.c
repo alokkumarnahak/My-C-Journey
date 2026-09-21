@@ -25,7 +25,7 @@ int main()
 }
 
 // Function definition
-void displaySquare(int n)S
+void displaySquare(int n)
 {
     // variable declaration
     int square;
