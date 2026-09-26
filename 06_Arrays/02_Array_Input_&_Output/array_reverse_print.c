@@ -1,5 +1,5 @@
 // Demonstration of of arrays in C
-// Taking input from user and print output
+// Taking input from user and print output in reverse
 
 // preprocessor directive
 #include<stdio.h>
