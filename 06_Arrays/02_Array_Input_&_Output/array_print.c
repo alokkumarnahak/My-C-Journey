@@ -8,7 +8,7 @@
 int main()  {
 
     // program description
-    printf("--- ARRAY OUTPUT ---\n\n");
+    printf("--- ARRAY PRINT ---\n\n");
 
     // variable declaration
     int size;
