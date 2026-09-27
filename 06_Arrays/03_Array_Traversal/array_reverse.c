@@ -1,5 +1,5 @@
 // Demonstration of array traversal in C
-// print in forward order
+// print in reverse order
 
 // preprocessor directive
 #include<stdio.h>
