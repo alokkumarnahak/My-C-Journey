@@ -1,5 +1,5 @@
 // Demonstration of array traversal in C
-// traverse and 5 to every element
+// traverse 
 
 // preprocessor directive
 #include<stdio.h>
