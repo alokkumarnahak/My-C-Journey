@@ -23,6 +23,7 @@ int main()  {
     if(n < 1)   {
         printf("Error: Invalid array size !\n");
         return 1;
+}
 
     // array input
     printf("Enter array elements: \n");
