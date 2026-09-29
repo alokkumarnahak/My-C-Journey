@@ -7,12 +7,12 @@
 // main function
 int main()  {
     // program description
-    printf("--- FIRST & LAST OCCURRENCE ---\n\n");
+    printf("--- COUNT OCCURRENCE ---\n\n");
 
     // variable declaration
     int n, key, count = 0;
 
-    // user input
+    // array size user input
     printf("Enter array size: ");
     scanf("%d", &n);
 
