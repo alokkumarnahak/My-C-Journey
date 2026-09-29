@@ -10,7 +10,7 @@ int main()  {
     printf("--- FIRST & LAST OCCURRENCE ---\n\n");
 
     // variable declaration
-    int n, key, count = 0;
+    int n, key, found = 0;
 
     // user input
     printf("Enter array size: ");
@@ -39,19 +39,20 @@ int main()  {
     for(int i = 0; i < n; i++) {
         if(arr[i] == key)   {
             printf("First occurence at index: %d, position: %d\n", i, i+1);
-            count++;
+            found = 1;
             break;
         }
     }
     for(int i = n-1; i >= 0; i--) {
         if(arr[i] == key)   {
             printf("Last occurence at index: %d, position: %d\n", i, i+1);
+            found = 1;
             break;
         }
     }
 
     // if element is not present
-    if(count == 0)  {
+    if(found == 0)  {
         printf("The element %d is not present in the array.",key);
     }
 
