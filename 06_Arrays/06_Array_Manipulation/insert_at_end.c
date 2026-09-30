@@ -15,13 +15,15 @@ int main()
 
     // variable declaration
     int key;
+    int size = 4;
 
     // input key element to insert
     printf("Enter the element you want to insert: ");
     scanf("%d", &key);
 
     // logic
-    arr[4] = key;
+    arr[size] = key;
+    size++;
 
     // display array
     printf("\nArray after insertion:\n");
