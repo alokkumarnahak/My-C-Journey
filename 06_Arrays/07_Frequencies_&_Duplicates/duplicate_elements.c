@@ -11,7 +11,7 @@ int main()
     printf("--- FIND DUPLICATE ELEMENTS ---\n\n");
 
     // variable declaration
-    int size = 7;
+    int size;
     int duplicate;
 
     // user input
