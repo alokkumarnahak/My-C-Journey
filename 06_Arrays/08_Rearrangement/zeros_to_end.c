@@ -42,7 +42,7 @@ int main()  {
     }
 
     // fill remaining positions with zeros
-    if(position < size) {
+    while(position < size) {
         arr[position] = 0;
         position++;
     }
