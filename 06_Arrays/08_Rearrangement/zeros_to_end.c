@@ -33,12 +33,18 @@ int main()  {
     }
 
     // logic
-    for(int i = 0; i <= top; i++) {
-        if(arr[i] == 0) {
-            arr[i] = arr[top];
-            arr[top] = 0;
-            top--;
+    int position = 0;
+    for (int i = 0; i < size; i++) { 
+        if (arr[i] != 0) {
+            arr[position] = arr[i];
+            position++;
         }
+    }
+
+    // fill remaining positions with zeros
+    if(position < size) {
+        arr[position] = 0;
+        position++;
     }
 
     // printing the new array
