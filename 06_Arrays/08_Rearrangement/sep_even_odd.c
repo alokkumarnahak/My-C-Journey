@@ -34,7 +34,7 @@ int main()  {
 
     // logic
     for (int i = 0; i <= top; i++) { 
-        if (arr[i] % 2 == 1) {
+        if (arr[i] % 2 != 0) {
             int temp = arr[top];
             arr[top] = arr[i];
             arr[i] = temp;
