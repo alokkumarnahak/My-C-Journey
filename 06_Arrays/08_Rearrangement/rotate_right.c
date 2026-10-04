@@ -1,5 +1,5 @@
 // Demonstration of array rearrangement in C
-// Rotate an array left by one position
+// Rotate an array right by one position
 
 #include <stdio.h>
 
