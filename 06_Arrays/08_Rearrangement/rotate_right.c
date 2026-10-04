@@ -6,7 +6,7 @@
 int main()
 {
     // program description
-    printf("--- LEFT ROTATION ---\n\n");
+    printf("--- RIGHT ROTATION ---\n\n");
 
     // variable declaration
     int size;
