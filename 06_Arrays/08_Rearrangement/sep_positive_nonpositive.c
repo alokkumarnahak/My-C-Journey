@@ -16,15 +16,15 @@ int main()  {
     printf("Enter array size: ");
     scanf("%d", &size);
 
-    // array declaration
-    int arr[size];
-    int top = size - 1;
-
     // valid size check
     if(size < 1)   {
         printf("Error: Invalid array size !");
         return 1;
     }
+
+    // array declaration
+    int arr[size];
+    int top = size - 1;
 
     // array input
     printf("Enter array elements: \n");
