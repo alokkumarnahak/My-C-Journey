@@ -49,6 +49,7 @@ int main()
     }
 
     // printing the new array
+    printf("\nArray after sorting\n");
     for (int i = 0; i < size; i++)
     {
         printf("%d ", arr[i]);
