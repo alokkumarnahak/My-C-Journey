@@ -1,6 +1,3 @@
-// Row sums
-// Column sums
-
 // Demonstration of 2D array in C
 // row and column sums
 
@@ -11,7 +8,7 @@
 int main()
 {
     // program description
-    printf("--- ROW & COLUMN SUMS ---\n\n");
+    printf("--- ROW & COLUMN & ALL SUMS ---\n\n");
 
     // variable declaration
     int m, n, allSum = 0;
