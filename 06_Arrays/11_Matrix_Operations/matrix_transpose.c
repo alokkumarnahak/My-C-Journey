@@ -26,10 +26,9 @@ int main()  {
 
     // matrix declaration
     int arr1[m][n];
-    int arr2[m][n];
 
-    printf("\nMatrix 1:\n");
-    printf("Enter elements of first matrix:\n");
+    // matrix element input
+    printf("Enter elements of matrix:\n");
     for(int i = 0; i < m; i++)  {
         for(int j = 0; j < n; j++)  {
             scanf("%d", &arr1[i][j]);
