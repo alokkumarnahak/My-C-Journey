@@ -36,7 +36,7 @@ int main()  {
         printf("\n");
     }
 
-    // prints main diagonal
+    // prints secondary diagonal
     printf("Secondary diagonal elements of matrix:\n");
     for(int j = n - 1; j >= 0; j--)  {
         for(int i = 0; i < m; i++)  {
