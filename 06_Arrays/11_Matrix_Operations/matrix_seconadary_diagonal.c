@@ -1,5 +1,5 @@
 // Demonstration of matrix operations in C
-// main diagonal of matrix
+// secondary diagonal of matrix
 
 // preprocessor directive
 #include<stdio.h>
@@ -7,7 +7,7 @@
 // main function
 int main()  {
     // program description
-    printf("--- MAIN DIAGONAL OF MATRIX ---\n\n");
+    printf("--- SECONDARY DIAGONAL OF MATRIX ---\n\n");
 
     // variable declaration
     int m, n;
