@@ -36,16 +36,11 @@ int main()  {
     }
 
     // checks symmetric matrix
-    for(int i = 0; i < m; i++)  {
-        for(int j = 0; j < m; j++)  {
-            if(i == j)  {
-                continue;
-            }
-            else    {
-                if(arr[i][j] != arr[j][i]) {
-                printf("It is not a symmetric matrix.");
-                return 0;
-                }
+    for(int i = 0; i < m - 1; i++)  {
+        for(int j = i + 1; j < m; j++)  {
+            if(arr[i][j] != arr[j][i]) {
+            printf("It is not a symmetric matrix.");
+            return 0;
             }
         }
     }
