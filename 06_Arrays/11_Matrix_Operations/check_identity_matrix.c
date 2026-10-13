@@ -10,32 +10,25 @@ int main()  {
     printf("--- IDENTITY MATRIX ---\n\n");
 
     // variable declaration
-    int m, n;
+    int m;
 
     // user input
-    printf("Enter no. of rows: ");
+    printf("Enter a square matrix.\n");
+    printf("Enter no. of rows & columns: ");
     scanf("%d", &m);
-    printf("Enter no. of columns: ");
-    scanf("%d", &n);
 
     // valid size check
-    if(m < 1 || n < 1)  {
+    if(m < 1)  {
         printf("Invalid size !\n");
-        return 1;
-    }
-
-    if(m != n)  {
-        printf("Enter a square matrix.");
-        return 1;
     }
 
     // matrix declaration
-    int arr[m][n];
+    int arr[m][m];
 
     // matrix element input
     printf("Enter elements of matrix:\n");
     for(int i = 0; i < m; i++)  {
-        for(int j = 0; j < n; j++)  {
+        for(int j = 0; j < m; j++)  {
             scanf("%d", &arr[i][j]);
         }
         printf("\n");
@@ -43,23 +36,20 @@ int main()  {
 
     // checks identity matrix
     for(int i = 0; i < m; i++)  {
-        for(int j = 0; j < n; j++)  {
+        for(int j = 0; j < m; j++)  {
             if(i == j)  {
                 if(arr[i][j] != 1)    {
                 printf("It is not an identity matrix.");
                 return 0;
                 }
             }
-            else    {
-                if(arr[i][j] != 0) {
+            else if(arr[i][j] != 0) {
                 printf("It is not an identity matrix.");
                 return 0;
-                }
             }
         }
     }
     printf("It is an identity matrix.");
-
 
     // return statement
     return 0;
